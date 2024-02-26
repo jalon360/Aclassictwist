@@ -1,12 +1,44 @@
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
+    color: black;
+}
+
+.container {
+    flex: 1;
+}
+
+.banner {
+    background-color: rgb(133, 71, 71);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 10px;
+}
+
+#banner-image {
+    margin-right: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
     background-color: black;
     color: white;
 }
-.container {
-    border: 1px solid white;
+
+.content {
+    padding: 20px;
 }
-.banner {
-    background-color: red;
+
+footer {
+    background-color: black;
     color: white;
-    padding: 10px;
+    text-align: center;
+    padding: 10px 0;
 }
