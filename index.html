@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Restaurant</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title of the page -->
+    <title>Classic Twist</title>
+  <!-- Link to Bootstrap CSS and custom CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,20 +16,59 @@
             <img src="your-image-source" alt="Banner Image" id="banner-image">
             <h1>Classic Twist</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Reservations</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div class="content">
-            <h2>About Us</h2>
-            <p>Welcome to our restaurant! We offer a variety of dishes to satisfy your palate.</p>
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#catering.html">Catering</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="content">
+                    <h2>Welcome</h2>
+                    <p>At our restaurant! We offer a variety of dishes to satisfy your palate.</p>
+                </div>
+
+                <div class="col-md-6">
+                    <h2>Menu</h2>
+                    <p>Information about wedding catering...</p>
+                    <img src="" alt="Wedding Image">
+                </div>
+                <div class="col-md-6">
+                    <h2>Catering</h2>
+                    <p>Information about wedding catering...</p>
+                    <img src="assets/brunch/IMG_1170.jpeg" alt="Toast">
+                </div>
+                <div class="col-md-6">
+                    <h2>Delivery locations</h2>
+                    <p>Information about wedding catering...</p>
+                    <img src="wedding-image-source" alt="Wedding Image">
+                </div>
+                <div class="col-md-6">
+                    <h2>Connect with us</h2>
+                    <p>Information about wedding catering...</p>
+                    <img src="wedding-image-source" alt="Wedding Image">
+                </div>
+
+
+               
+            </main>
         </div>
         <footer>
-            <p>Need Help? Email: your-email@example.com | Phone: your-phone-number</p>
+            <p>Contact us at Email:<a href="mailto:classictwistllc@gmail.com"> classictwistllc@gmail.com </a>| Phone: <a href="tel:7706483886">770-648-3886 </a></p>
+            
         </footer>
     </div>
 </body>
