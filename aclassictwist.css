@@ -1,0 +1,96 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+}
+
+/* Banner styles */
+.banner img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Navigation styles */
+.navbar {
+    background-color: white;
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: black;
+}
+
+.navbar-nav {
+    text-align: right;
+}
+
+.nav-link {
+    color: black;
+    margin-right: 20px;
+}
+
+/* Featured Dish styles */
+.featured-dish img {
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+}
+
+.featured-dish p {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Catering Services styles */
+.catering-services img {
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+}
+
+.catering-services p {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Delivery Locations styles */
+.delivery-locations img {
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+}
+
+.delivery-locations h3 {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Footer styles */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}
