@@ -1,6 +1,5 @@
 # Aclassictwist
-
-launch page
+Launch page
 - [ ] black pull down
 - [ ]  middle of page has logo with slogan under it
 
@@ -9,39 +8,39 @@ Home page (white backgroud)
 - [ ]  Nav bar
 - [ ]  Carousel of items
 - [ ]  Newest item section row
-- - [ ]  Picture of item
-- - [ ]  Description of item
+    - [ ]  Picture of item
+    - [ ]  Description of item
 - [ ]  Catering section row
-- - [ ]  picture
-- - [ ]  short discription about catering 
-- - [ ]  button to catering page 
+    - [ ]  picture
+    - [ ]  short discription about catering 
+    - [ ]  button to catering page 
 - [ ]  Delivery locations 
-- - [ ]  picture 
-- - [ ] short discription
-- - [ ] dropdown of current locations
+    - [ ]  picture 
+    - [ ] short discription
+    - [ ] dropdown of current locations
 - [ ] Footer
-- - [ ] email
-- - [ ] phone
-- - [ ] socials 
+    - [ ] email
+    - [ ] phone
+    - [ ] socials 
 
 Catering page
 - [ ] Banner
 - [ ] Nav bar
 - [ ] Get in touch now 
-- - [ ] email or phone button 
+    - [ ] email or phone button 
 - [ ] Weddings
-- - [ ] Picture
-- - [ ] Short description 
+    - [ ] Picture
+    - [ ] Short description 
 - [ ] Grad party
-- - [ ] Picture
-- - [ ] Short description  
+    - [ ] Picture
+    - [ ] Short description  
 - [ ] Cookout/soical outing 
-- - [ ] Picture
-- - [ ] Short description 
+    - [ ] Picture
+    - [ ] Short description 
 - [ ] Footer
-- - [ ] Email
-- - [ ] Phone
-- - Socials 
+    - [ ] Email
+    - [ ] Phone
+    - [ ] Socials 
 
 About us page 
 - [ ] Banner
@@ -49,6 +48,6 @@ About us page
 - [ ] Ceo picture  
 - [ ] Summary
 - [ ] Footer
-- - [ ] Email
-- - [ ] Phone
-- - [ ]Socials 
+    - [ ] Email
+    - [ ] Phone
+    - [ ] Socials 
