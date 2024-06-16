@@ -1,9 +1,15 @@
 # Aclassictwist
+Creating a website for The classic twist to enhance customer performence.
+ 
+https://code.visualstudio.com/docs/nodejs/reactjs-tutorial
+Hosting 
+https://vercel.com/
+
 Launch page
 - [ ] black pull down
 - [ ]  middle of page has logo with slogan under it
 
-Home page (white backgroud)
+Home page (White backgroud)
 - [ ]  Logo banner
 - [ ]  Nav bar
 - [ ]  Carousel of items
@@ -51,3 +57,4 @@ About us page
     - [ ] Email
     - [ ] Phone
     - [ ] Socials 
+
