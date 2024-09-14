@@ -1,7 +1,8 @@
 // AboutUsPage.js
 import React from 'react';
-import NavBar from './NavBar';
-import Footer from './Footer';
+import NavBar from './comp/Navbar';
+import Footer from './comp/Footer';
+
 
 const AboutUsPage = () => (
   <div className="bg-white">
