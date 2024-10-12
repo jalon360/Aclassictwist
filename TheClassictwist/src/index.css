@@ -1,5 +1,11 @@
 /* src/index.css */
+
 @tailwind base;
 @tailwind components;
-
 @tailwind utilities;
+
+/* Add dark mode styles */
+.dark {
+  @apply bg-gray-900 text-white; /* Example styles for dark mode */
+}
+
