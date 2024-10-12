@@ -6,6 +6,7 @@ import HomePage from './HomePage';
 import CateringPage from './CateringPage';
 import AboutUsPage from './AboutUsPage';
 
+
 const App = () => (
   <Router>
     <Routes>

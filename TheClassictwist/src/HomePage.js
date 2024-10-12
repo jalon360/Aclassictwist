@@ -2,6 +2,7 @@
 import React from 'react';
 import NavBar from './comp/Navbar';
 import Carousel from './comp/ControlledCarousel';
+import MapComponent from './MapComponent'; // Adjust the import path if necessary
 import Footer from './comp/Footer';
 import { Card, Row, Col, Button } from 'react-bootstrap'; // Import Bootstrap components
 
@@ -19,7 +20,7 @@ function CateringServices() {
             <Card.Text>
               At Classic Twist, we specialize in creating unforgettable culinary experiences for your events. From elegant weddings to corporate gatherings, our catering services are tailored to your needs. Let us make your occasion truly special.
             </Card.Text>
-            <Button variant="primary" href="/CateringPage">
+            <Button variant="primary" href="https://example.com/catering">
               Learn More
             </Button>
           </Card.Body>
@@ -29,7 +30,7 @@ function CateringServices() {
   );
 }
 
-// Delivery Locations Component
+// src/DeliveryLocation
 function DeliveryLocations() {
   return (
     <Card className="delivery-locations" style={{ width: '100%' }}>
@@ -38,11 +39,13 @@ function DeliveryLocations() {
         <Card.Text>
           We currently deliver at these locations.
         </Card.Text>
-        {/* Add your map and dropdown components here */}
+        <MapComponent />
       </Card.Body>
     </Card>
   );
 }
+
+
 
 // HomePage Component
 const HomePage = () => (
