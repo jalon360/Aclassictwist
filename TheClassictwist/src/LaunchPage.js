@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap
 
 const LaunchPage = () => {
   return (
-    <div className="container-fluid d-flex flex-column align-items-center justify-content-center h-100 bg-black text-white">
+    <div className="container-fluid d-flex flex-column align-items-center justify-content-center h-100 bg-white text-white">
       <div className="text-center">
         <img 
           src={classicLogo} 

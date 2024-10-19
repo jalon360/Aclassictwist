@@ -18,8 +18,8 @@ const NavBar = () => {
         <div className="hidden lg:flex lg:items-center lg:space-x-4">
           <Link to="/home" className="hover:underline">Home</Link>
           <Link to="/menu" className="hover:underline">Menu</Link>
-          <Link to="/CateringPage" className="hover:underline">Catering</Link>
-          <Link to="/AboutUs" className="hover:underline">About Us</Link>
+          <Link to="/catering" className="hover:underline">Catering</Link>
+          <Link to="/about-us" className="hover:underline">About Us</Link>
           <button
             onClick={toggleTheme}
             className="bg-transparent border border-white rounded px-2 py-1"
