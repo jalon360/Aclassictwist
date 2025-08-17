@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, Linking, Modal, Pressable, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, Linking, Modal, Animated, Dimensions, Pressable } from 'react-native';
 import { useRouter } from 'expo-router';
 
 // Carousel images
@@ -9,9 +9,9 @@ const carouselImages = [
   require('@/assets/images/icon.png'),
 ];
 
-
-export default function HomeScreen() {
+export default function Home() {
   const [navVisible, setNavVisible] = useState(false);
+  const [slideAnim] = useState(new Animated.Value(-300)); // initial off-screen
   const [carouselIndex, setCarouselIndex] = useState(0);
   const router = useRouter();
   const width = Dimensions.get('window').width;
@@ -24,13 +24,32 @@ export default function HomeScreen() {
     return () => clearInterval(timer);
   }, []);
 
-  // collapse nav
+  // Slide nav in/out
+  React.useEffect(() => {
+    if (navVisible) {
+      Animated.timing(slideAnim, {
+        toValue: 0,
+        duration: 300,
+        useNativeDriver: false,
+      }).start();
+    } else {
+      Animated.timing(slideAnim, {
+        toValue: -300,
+        duration: 300,
+        useNativeDriver: false,
+      }).start();
+    }
+  }, [navVisible]);
+
   return (
     <ScrollView style={styles.container}>
-      {/* Collapsible Navigation Pane */}
-      <Modal visible={navVisible} animationType="slide" transparent>
-        <View style={styles.modalOverlay}>
-          <View style={styles.navPane}>
+      {/* Collapsible Navigation Pane with slide and overlay close */}
+      <Modal visible={navVisible} transparent animationType="none">
+        <Pressable style={styles.modalOverlay} onPress={() => setNavVisible(false)}>
+          <Animated.View style={[styles.navPane, { left: slideAnim }]}
+            onStartShouldSetResponder={() => true}
+            onTouchEnd={e => e.stopPropagation()} // Prevent overlay close when clicking inside
+          >
             <View style={styles.navPaneHeader}>
               <TouchableOpacity onPress={() => setNavVisible(false)}>
                 <Text style={styles.closeText}>×</Text>
@@ -39,7 +58,7 @@ export default function HomeScreen() {
                 <Text style={styles.gearText}>⚙️</Text>
               </TouchableOpacity>
             </View>
-                     <TouchableOpacity style={styles.navButton}>
+            <TouchableOpacity style={styles.navButton}>
               <Text style={styles.navButtonText}>Login</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.navButton}>
@@ -54,8 +73,8 @@ export default function HomeScreen() {
             <TouchableOpacity style={styles.navButton} onPress={() => { setNavVisible(false); router.push('/(tabs)/aboutus'); }}>
               <Text style={styles.navButtonText}>About Us</Text>
             </TouchableOpacity>
-          </View>
-        </View>
+          </Animated.View>
+        </Pressable>
       </Modal>
 
       {/* Header */}
@@ -99,7 +118,7 @@ export default function HomeScreen() {
         </View>
       </View>
 
-      {/* Upcoming Events */}
+      {/* Upcoming Events 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Upcoming Events</Text>
         <View style={styles.cateringRow}>
@@ -115,6 +134,7 @@ export default function HomeScreen() {
           </View>
         </View>
       </View>
+      */}
 
 
       {/* Delivery Locations 
