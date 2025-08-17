@@ -82,6 +82,23 @@ export default function HomeScreen() {
         </View>
       </View>
 
+
+      {/* Catering Banner Section */}
+      <View style={styles.cateringBannerContainer}>
+        <Image
+          source={require('@/assets/brunch/IMG_1145.jpeg')}
+          style={styles.cateringBannerImage}
+          resizeMode="cover"
+        />
+        <View style={styles.cateringBannerOverlay}>
+          <Text style={styles.cateringBannerTitle}>WANT CATERING?</Text>
+          <Text style={styles.cateringBannerSubtitle}>Tell us what and how many and we'll bring/provide the food</Text>
+          <TouchableOpacity style={styles.cateringBannerButton} onPress={() => router.push('/(tabs)/catering')}>
+            <Text style={styles.cateringBannerButtonText}>ASK US ABOUT CATERING</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+
       {/* Upcoming Events */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Upcoming Events</Text>
@@ -99,25 +116,6 @@ export default function HomeScreen() {
         </View>
       </View>
 
-      {/* Catering Services */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Catering Services</Text>
-        <View style={styles.cateringRow}>
-          <Image
-            source={require('@/assets/brunch/IMG_1145.jpeg')}
-            style={styles.cateringImage}
-            resizeMode="cover"
-          />
-          <View style={styles.cateringTextContainer}>
-            <Text style={styles.cateringText}>
-              At Classic Twist, we specialize in creating unforgettable culinary experiences for your events. From elegant weddings to corporate gatherings, our catering services are tailored to your needs. Let us make your occasion truly special.
-            </Text>
-            <TouchableOpacity style={styles.caterButton} onPress={() => router.push('/(tabs)/catering')}>
-              <Text style={styles.caterButtonText}>Cater More</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </View>
 
       {/* Delivery Locations 
       <View style={styles.section}>
@@ -302,37 +300,64 @@ const styles = StyleSheet.create({
     color: '#1e293b',
     marginBottom: 12,
   },
-  cateringRow: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    marginBottom: 16,
-  },
-  cateringImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 16,
-    marginRight: 32,
-    backgroundColor: '#eee',
-  },
-  cateringTextContainer: {
-    flex: 1,
+  cateringBannerContainer: {
+    width: '100%',
+    aspectRatio: 2.5,
+    marginTop: 32,
+    marginBottom: 24,
+    position: 'relative',
     justifyContent: 'center',
+    alignItems: 'center',
   },
-  cateringText: {
-    fontSize: 16,
-    color: '#222',
-    marginBottom: 8,
+  cateringBannerImage: {
+    ...StyleSheet.absoluteFillObject,
+    width: '100%',
+    height: '100%',
+    borderRadius: 0,
   },
-  caterButton: {
-    backgroundColor: '#f31111ff',
-    borderRadius: 4,
+  cateringBannerOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.35)',
     paddingHorizontal: 16,
-    paddingVertical: 8,
-    alignSelf: 'flex-start',
   },
-  caterButtonText: {
+  cateringBannerTitle: {
     color: '#fff',
+    fontSize: 38,
     fontWeight: 'bold',
+    letterSpacing: 2,
+    textAlign: 'center',
+    marginBottom: 12,
+    textShadowColor: '#000',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 6,
+  },
+  cateringBannerSubtitle: {
+    color: '#fff',
+    fontSize: 18,
+    marginBottom: 18,
+    textAlign: 'center',
+    textShadowColor: '#000',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 4,
+  },
+  cateringBannerButton: {
+    backgroundColor: '#fff',
+    borderRadius: 6,
+    paddingHorizontal: 28,
+    paddingVertical: 12,
+    marginTop: 8,
+    shadowColor: '#000',
+    shadowOpacity: 0.15,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  cateringBannerButtonText: {
+    color: '#222',
+    fontWeight: 'bold',
+    fontSize: 18,
+    letterSpacing: 1,
   },
   deliveryRow: {
     flexDirection: 'row',
