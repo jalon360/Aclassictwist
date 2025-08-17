@@ -12,7 +12,7 @@ export default function LaunchScreen() {
   resizeMode="contain"
       />
       <Text style={styles.welcome}>Welcome to the Adventure!</Text>
-      <TouchableOpacity style={styles.button} onPress={() => router.replace('/(tabs)/home')}> 
+      <TouchableOpacity style={styles.button} onPress={() => router.replace('/(tabs)/Home')}> 
         <Text style={styles.buttonText}>Continue</Text>
       </TouchableOpacity>
     </View>
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   button: {
-    backgroundColor: '#2563eb',
+    backgroundColor: '#f31111ff',
     paddingHorizontal: 32,
     paddingVertical: 14,
     borderRadius: 8,

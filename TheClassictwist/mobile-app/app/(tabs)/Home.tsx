@@ -1,13 +1,11 @@
-
-
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, Linking, Modal, Pressable, Dimensions } from 'react-native';
 import { useRouter } from 'expo-router';
 
 // Carousel images
 const carouselImages = [
-  require('@/assets/images/partial-react-logo.png'),
-  require('@/assets/images/react-logo.png'),
+  require('@/assets/IMG_9558.jpeg'),
+  require('@/assets/IMG_9578.jpeg'),
   require('@/assets/images/icon.png'),
 ];
 
@@ -47,7 +45,7 @@ export default function HomeScreen() {
             <TouchableOpacity style={styles.navButton}>
               <Text style={styles.navButtonText}>Sign Up</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.navButton} onPress={() => { setNavVisible(false); router.replace('/(tabs)/index'); }}>
+            <TouchableOpacity style={styles.navButton} onPress={() => { setNavVisible(false); router.replace('/(tabs)'); }}>
               <Text style={styles.navButtonText}>Launch</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.navButton} onPress={() => { setNavVisible(false); router.push('/(tabs)/catering'); }}>
@@ -273,7 +271,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   carouselImage: {
-    height: 180,
+    height: 500,
     borderRadius: 12,
     marginBottom: 8,
     backgroundColor: '#eee',
@@ -326,7 +324,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   caterButton: {
-    backgroundColor: '#1d4ed8',
+    backgroundColor: '#f31111ff',
     borderRadius: 4,
     paddingHorizontal: 16,
     paddingVertical: 8,
